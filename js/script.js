@@ -55,21 +55,21 @@ $(document).ready(function() {
 			if (electricInput === 0 || electricInput === "undefined") {
 				electricScore = 0;
 			} else {
-				electricScore = (electricInput * 105)/64.28;
+				electricScore = (electricInput * 105);
 			}
 			// console.log("Electric score is: " + electricScore);
 
 			if (gasInput === 0 || gasInput === "undefined") {
 				gasScore = 0;
 			} else {
-				gasScore = (gasInput * 105)/64.28;
+				gasScore = (gasInput * 105);
 			}
 			// console.log("Gas score is: " + gasScore);
 
 			if (oilInput === 0 || oilInput === "undefined") {
 				oilScore = 0;
 			} else {
-				oilScore = (oilInput * 113)/64.28;
+				oilScore = (oilInput * 113);
 			}
 			// console.log("Oil score is: " + oilScore);
 
