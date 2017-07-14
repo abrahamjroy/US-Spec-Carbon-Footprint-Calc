@@ -1,4 +1,4 @@
-# India-Spec-Carbon-Footprint-Calculator
+# US-Spec-Carbon-Footprint-Calculator
 Creating a Carbon footprint calculator to satisfy my green thumbs
 
 
@@ -11,7 +11,7 @@ The images used are obtained from generic sites and can be customized to your li
 
 
 
-the units have been adjusted to suit India's Metric units, and most of the code has been modified to suit the local geography
+the units have been adjusted to suit American Imperial units, and most of the code has been modified to suit the local geography
 
 
 
