@@ -17,7 +17,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id="announcement-panel">
 				<h1 id="announcement-header">Carbon Footprint Calculator</h1>
-				<h3 id="announcement-subheader">Created by Abraham Roy and Team</h3>
+				<h3 id="announcement-subheader">Created by TCS Internship</h3>
 			</div>
 		</div>
 		<div class="row">
@@ -55,9 +55,33 @@
 						<br/>
 						<h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Travel</h3>
 						<div class="form-group">
-							<label for="car">Annual distance driven on your car</label>
+							<label for="car">Annual distance driven on your car if you posess a Gasoline vehicle(Also enter values for Taxicabs)</label>
 							<div class="input-group-addon">Miles</div>
-							<input class="form-control" id="car" type="number" min="0" step="1">
+							<input class="form-control" id="carP" type="number" min="0" step="1">
+							<span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+						</div>
+<div class="form-group">
+							<label for="car">Annual distance driven on your car if you posess a Deisel vehicle(Also enter values for Taxicabs and/or Pick-Ups)</</label>
+							<div class="input-group-addon">Miles</div>
+							<input class="form-control" id="carD" type="number" min="0" step="1">
+							<span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+						</div>
+<div class="form-group">
+							<label for="car">Annual distance driven on your car if you posess a CNG/Bio fuel/Electric  vehicle</label>
+							<div class="input-group-addon">Miles</div>
+							<input class="form-control" id="carC" type="number" min="0" step="1">
+							<span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+						</div>
+<div class="form-group">
+							<label for="car">Annual distance driven on your Bike</label>
+							<div class="input-group-addon">Miles</div>
+							<input class="form-control" id="bike" type="number" min="0" step="1">
+							<span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+						</div>
+<div class="form-group">
+							<label for="car">Annual distance travelled in an Amtrak Train , Tram or Metro Rail</label>
+							<div class="input-group-addon">Miles</div>
+							<input class="form-control" id="train" type="number" min="0" step="1">
 							<span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
 						</div>
 						<div class="form-group">
@@ -111,13 +135,14 @@
 
 				<div id="results" class="text-center">
 					<h1 id="score"></h1>
+					<div id="donutchart" class="center" style="width: 800px; height: 500px;"></div>
 					<br/>
-					<p class="lead">This number represents the amount of greenhouse gases in units of carbon dioxide you emit per year</p>
+					<p class="lead">This number represents the amount of greenhouse gases in Metric Tonnes of carbon dioxide you emit per year</p>
 					<br/>
-					<h5 class="bg-success score-info">6,000 or below is EXCELLENT</h5>
-					<h5 class="bg-info score-info">6,000 to 15,999 is GOOD</h5>
-					<h5 class="bg-warning score-info">16,000 to 22,000 is AVERAGE</h5>
-					<h5 class="bg-danger score-info">22,000 or above is BAD</h5>
+					<h5 class="bg-success score-info">6 or below is EXCELLENT</h5>
+					<h5 class="bg-info score-info">6 to 15.999 is GOOD</h5>
+					<h5 class="bg-warning score-info">16 to 22.000 is AVERAGE</h5>
+					<h5 class="bg-danger score-info">22.000 or above is BAD</h5>
 					<br/>
 					<br/>
 					<br/>
@@ -141,12 +166,22 @@
 			</div>	
 		</div>
 	</div>
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+ 
+</script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="js/script.js" type="text/javascript"></script>
 </body>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 </script>
 <h3 id="announcement-subheader">Your Current Location</h3>
 <div id="dvMap" style="width: 300px; height: 200px;bottom:-1px;left:520px;">
